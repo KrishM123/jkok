@@ -1,8 +1,5 @@
 # Asset Lookup: learning interview practice
 
-An original 45–60 minute practice exercise, inspired by public descriptions of
-Palantir's learning interview. This is not an actual Palantir interview question.
-
 You have joined a team maintaining an asset lookup service. A dashboard currently
 calls `GET /assets/{id}` once per asset. Your task is to add a batch endpoint,
 then investigate a report that asset cards sometimes appear in the wrong order.
@@ -75,15 +72,15 @@ Afterward, add a regression test of your own and explain why your fix works.
 
 ## Files
 
-| File | Role |
-| --- | --- |
-| `handlers.py` | Existing single endpoint and your batch implementation |
-| `upstream.py` | Simulated upstream and client library |
-| `server.py` | Small HTTP adapter; no framework knowledge needed |
-| `docs/api.md` | HTTP contract |
-| `docs/client.md` | Client library documentation |
-| `demo.py` | Reproduces the response-order symptom |
-| `tests/` | Contract and regression tests |
+| File             | Role                                                   |
+| ---------------- | ------------------------------------------------------ |
+| `handlers.py`    | Existing single endpoint and your batch implementation |
+| `upstream.py`    | Simulated upstream and client library                  |
+| `server.py`      | Small HTTP adapter; no framework knowledge needed      |
+| `docs/api.md`    | HTTP contract                                          |
+| `docs/client.md` | Client library documentation                           |
+| `demo.py`        | Reproduces the response-order symptom                  |
+| `tests/`         | Contract and regression tests                          |
 
 Initial test failures are intentional: batch handler tests fail until Part 2,
 and client ordering tests expose the defect for Part 3.
